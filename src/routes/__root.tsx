@@ -109,6 +109,18 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         {/* Applies the saved (or system) colour theme before first paint, so there is no light flash. */}
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-W1TFB6496D"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W1TFB6496D');`,
+          }}
+        />
         <HeadContent />
       </head>
       <body>
